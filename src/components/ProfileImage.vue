@@ -1,8 +1,7 @@
-inni:
 <template>
   <img
-    class="round-3xl h-8 w-8 object-contain"
     :src="imageLink"
+    class="h-8 w-8 rounded-3xl object-contain"
     alt="User profile image"
   />
 </template>
@@ -13,10 +12,8 @@ export default {
   data() {
     return {
       imageLink:
-        "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Picture.png",
+        "https://www.pngitem.com/pimgs/m/487-4876417_link-head-png-toon-link-face-png-transparent.png",
     };
   },
 };
 </script>
-
-<style></style>

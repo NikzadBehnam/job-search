@@ -1,4 +1,3 @@
-init:
 <template>
   <button :class="buttonClass">
     {{ text }}
@@ -9,7 +8,10 @@ init:
 export default {
   name: "ActionButton",
   props: {
-    text: { type: String, required: true },
+    text: {
+      type: String,
+      required: true,
+    },
     type: {
       type: String,
       required: false,
@@ -39,6 +41,6 @@ button {
 }
 
 .secondary {
-  @apply bg-transparent text-brand-blue-1 hover:bg-brand-blue-2;
+  @apply bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white;
 }
 </style>

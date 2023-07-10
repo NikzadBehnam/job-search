@@ -21,25 +21,22 @@
             </li>
           </ul>
         </nav>
+
         <div class="ml-auto flex h-full items-center">
-          <action-button
-            v-if="!isLoggedIn"
-            text="Sign In"
-            type="primary"
-            @click="loginUser"
-          />
-          <profile-image v-else />
+          <profile-image v-if="isLoggedIn" />
+          <action-button v-else text="Sign in" @click="loginUser" />
         </div>
       </div>
+
       <the-subnav v-if="isLoggedIn" />
     </div>
   </header>
 </template>
 
 <script>
-import ActionButton from "./ActionButton.vue";
-import ProfileImage from "./ProfileImage.vue";
-import TheSubnav from "./TheSubnav.vue";
+import ActionButton from "@/components/ActionButton.vue";
+import ProfileImage from "@/components/ProfileImage.vue";
+import TheSubnav from "@/components/TheSubnav.vue";
 
 export default {
   name: "MainNav",
@@ -50,7 +47,6 @@ export default {
   },
   data() {
     return {
-      isLoggedIn: false,
       company: "Bobo Careers",
       url: "https://careers.google.com",
       menuItems: [
@@ -61,6 +57,7 @@ export default {
         "Students",
         "Jobs",
       ],
+      isLoggedIn: false,
     };
   },
   methods: {
